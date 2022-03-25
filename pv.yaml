@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: data-0
+spec:
+  storageClassName: mysql
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  nfs:
+    server: 192.168.20.101
+    path: "/data/nfs-share/mysql-cluster/data-0"
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: data-1
+spec:
+  storageClassName: mysql
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  nfs:
+    server: 192.168.20.101
+    path: "/data/nfs-share/mysql-cluster/data-1"
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: data-2
+spec:
+  storageClassName: mysql
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  nfs:
+    server: 192.168.20.101
+    path: "/data/nfs-share/mysql-cluster/data-2"
